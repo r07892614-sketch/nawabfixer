@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #330000 80%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 35px 25px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  animation: borderGlow 3s infinite alternate;
+}
+
+/* Header */
+.title {
+  font-size: 1.9rem;
+  background: linear-gradient(90deg, #ffb703, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.subs {
+  color: #ccc;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+.owner {
+  margin-top: 6px;
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+/* Info Section */
+.info {
+  margin: 25px 0;
+  line-height: 1.6;
+}
+.highlight {
+  color: #ffe4c4;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.desc {
+  margin-top: 10px;
+  color: #f2f2f2;
+  font-size: 0.95rem;
+}
+
+/* Join Button */
+.join-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 40px;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff0000, #ffb703);
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(255, 50, 50, 0.5);
+  animation: fadeInOut 1.5s infinite alternate;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.join-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255, 80, 80, 0.7);
+}
+
+/* Timer */
+.timer-box {
+  margin-top: 25px;
+}
+.timer-label {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 8px;
+}
+#countdown {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffb703;
+}
+.sec {
+  color: #ccc;
+}
+/* Animations */
+@keyframes fadeInOut {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes borderGlow {
+  from { box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); }
+  to { box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); }
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .title { font-size: 1.5rem; }
+  #countdown { font-size: 2.3rem; }
+  .join-btn { padding: 12px 28px; font-size: 1rem; }
+}
